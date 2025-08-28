@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="OpenWeatherApp.MainPage"
+             xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="OpenWeather App">
+
+	<ScrollView>
+		<VerticalStackLayout Spacing="25" Padding="30,20" VerticalOptions="Center">
+
+			<Image
+                Source="dotnet_bot"
+                HeightRequest="200"
+                HorizontalOptions="Center" />
+
+			<Label
+                Text="OpenWeather MAUI App"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="32"
+                FontAttributes="Bold"
+                HorizontalOptions="Center" />
+
+			<Button
+                x:Name="GetWeatherBtn"
+                Text="Get Current Weather"
+                SemanticProperties.Hint="Gets the current weather for your location"
+                Clicked="OnGetWeatherClicked"
+                HorizontalOptions="Center"
+                BackgroundColor="#512BD4"
+                TextColor="White"
+                FontSize="18"
+                Padding="20,10" />
+
+			<ActivityIndicator
+                x:Name="LoadingIndicator"
+                IsVisible="False"
+                IsRunning="False"
+                Color="#512BD4" />
+
+			<Label
+                x:Name="LocationLabel"
+                Text=""
+                FontSize="16"
+                HorizontalOptions="Center"
+                TextColor="Gray" />
+
+			<Label
+                x:Name="CityLabel"
+                Text=""
+                FontSize="24"
+                FontAttributes="Bold"
+                HorizontalOptions="Center" />
+
+			<Label
+                x:Name="TemperatureLabel"
+                Text=""
+                FontSize="48"
+                FontAttributes="Bold"
+                HorizontalOptions="Center"
+                TextColor="#FF6B35" />
+
+			<Label
+                x:Name="DescriptionLabel"
+                Text=""
+                FontSize="18"
+                HorizontalOptions="Center"
+                TextColor="#333" />
+
+			<StackLayout x:Name="DetailsStack" IsVisible="False" Spacing="10">
+				<Label
+                    x:Name="FeelsLikeLabel"
+                    Text=""
+                    FontSize="16"
+                    HorizontalOptions="Center" />
+
+				<Label
+                    x:Name="HumidityLabel"
+                    Text=""
+                    FontSize="16"
+                    HorizontalOptions="Center" />
+
+				<Label
+                    x:Name="WindLabel"
+                    Text=""
+                    FontSize="16"
+                    HorizontalOptions="Center" />
+			</StackLayout>
+
+			<Label
+                x:Name="ErrorLabel"
+                Text=""
+                FontSize="14"
+                HorizontalOptions="Center"
+                TextColor="Red"
+                IsVisible="False" />
+
+		</VerticalStackLayout>
+	</ScrollView>
+
+</ContentPage>
