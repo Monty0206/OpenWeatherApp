@@ -9,7 +9,7 @@ public partial class MainPage : ContentPage
     private readonly HttpClient _httpClient;
 
     // Replace with your OpenWeather API key
-    private const string ApiKey = "61b957f7bf35104399c476580f03451a";
+    private const string ApiKey = "cc8098a8853318f3f0a8b00c00f6cfdc";
     private const string BaseUrl = "https://api.openweathermap.org/data/2.5/weather";
 
     public MainPage()
